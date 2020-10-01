@@ -16,7 +16,7 @@ class atm:
                 break
             else:
                 i=i-1
-                print('Incorrect PIN, {} tries left'.format(i))
+                print('PIN incorrect, {} tries left'.format(i))
         if i==0:
             del info[name]
             print('Account Blocked!')
@@ -24,14 +24,14 @@ class atm:
         print('Account Balance: ',info[name][3])
     def withdraw(self):
         print('Account Balance: ',info[name][3])
-        amt=float(input('Enter Amount To Withdraw: '))
+        amt=float(input('Enter Amount To Be Withdrawn: '))
         if amt<=info[name][3]:
             info[name][3]=info[name][3]-amt
-            print('New Account Balance: ', info[name][3])
+            print('New Account Balance is : ', info[name][3])
         else:
             print('Insufficient Balance in Account!')
     def deposit(self):
-        amt=float(input('Enter Amount To Deposit: '))
+        amt=float(input('Enter Amount To Be Deposited: '))
         info[name][3]=info[name][3]+amt
         print('New Account Balance: ', info[name][3])
 
